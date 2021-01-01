@@ -44,5 +44,6 @@ int ip = 0;
 int pp = 10;//programming pin (OPTIONAL)
 ```COMMING SOON```
 [VER 4.1.0] EEPROM commands
-[VER 5.0.0] [PUSHBACKS VIABLE] support for using the reader_witer_init() function to init as both
+[VER 5.0.0] [PUSHBACKS VIABLE\] [POSSIBLE TO BE CANECLED] support for using the reader_witer_init() function to init as both
 [NO DATE YET] [POSSIBLE TO BE CANCELED] WriteBytes(2-8 bytes packed into 8-bit codes)
+[NO DATE YET] [POSSIBLE TO BE CANECLED] reader_init() and writer_init() 
