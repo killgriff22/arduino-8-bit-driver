@@ -1,4 +1,3 @@
-void setupbinary(){
 //pins that can be changed wil be commentexd upon
 int bit_8 = 9;//this thru bit_1 may be changed to the appropriate pins
 int bit_7 = 8;
@@ -8,7 +7,7 @@ int bit_4 = 5;
 int bit_3 = 4;
 int bit_2 = 3;
 int bit_1 = 2;
-int bit_1R = 13;//this thru bit_1 may be changed to the appropriate pins
+int bit_1R = 13;//this thru bit_8R may be changed to the appropriate pins
 int bit_2R = 14;
 int bit_3R = 15;
 int bit_4R = 16;
@@ -20,7 +19,9 @@ int R = 10;//pin for programming off
 int G = 11;//pin for programming on
 int bits[8] = {2,3,4,5,6,7,8,9};
 int ip = 0;
+int B = 13;
 int pp = 12;//programming pin (OPTIONAL)
+void setupbits() {
 pinMode(bit_8,OUTPUT);
 pinMode(bit_7,OUTPUT);
 pinMode(bit_6,OUTPUT);
@@ -35,17 +36,24 @@ randomSeed(analogRead(0));
 pinMode(R,OUTPUT);
 pinMode(G,OUTPUT);
 pinMode(pp,INPUT);
+pinMode(B,OUTPUT);
 }
 void writeBit(char Bit , char io){
   digitalWrite(Bit,io);
 }
-void green(){
-  digitalWrite(R,0);
+void Gr(){
   digitalWrite(G,1);
 }
-void red(){
+void Re(){
   digitalWrite(R,1);
-  digitalWrite(G,0); 
+}
+void Blu(){
+  digitalWrite(B,1);
+}
+void led_clear(){
+  digitalWrite(R,0);
+  digitalWrite(G,0);
+  digitalWrite(B,0);
 }
 void writeByte(char io1 , char io2 , char io3 , char io4 , char io5 , char io6 , char io7 , char io8){
   writeBit(bit_1,io1);
